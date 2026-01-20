@@ -265,7 +265,7 @@ class DashboardHandler(http.server.BaseHTTPRequestHandler):
 <div class="cstring-label">Demo Usage (click to select all)</div>
 <input type="text" class="usage-input" value="{demo_usage}" onclick="this.select()" readonly>
 </div>'''
-        html_content = f'''<!DOCTYPE html><html><head><title>R10.5 Dashboard</title><meta http-equiv="refresh" content="5">
+        html_content = f'''<!DOCTYPE html><html><head><title>R10.5 - {public_ip}</title><meta http-equiv="refresh" content="5">
 <style>
 *{{box-sizing:border-box}}body{{font-family:'Segoe UI',system-ui,sans-serif;background:#ffffff;color:#1a1a1a;padding:20px;margin:0}}
 h1{{color:#f97316;text-align:center;margin-bottom:5px;font-size:2em}}
@@ -292,7 +292,7 @@ button:hover{{background:#16a34a}}
 <h1>R10.5 TLS Proxy</h1>
 {cstring_html}
 <div class="stats">
-<div class="stat"><div class="stat-value">{public_ip}</div><div class="stat-label">Public IP</div></div>
+<div class="stat"><div class="stat-value">{public_ip}</div><div class="stat-label">Port {cmd_options.server_port}</div></div>
 <div class="stat"><div class="stat-value">{online_count}/{len(clients)}</div><div class="stat-label">Online</div></div>
 <div class="stat"><div class="stat-value up">{format_bytes(total_up)}</div><div class="stat-label">Upload</div></div>
 <div class="stat"><div class="stat-value down">{format_bytes(total_down)}</div><div class="stat-label">Download</div></div>
